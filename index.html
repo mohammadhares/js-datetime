@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS </title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body >
+
+    <section class="container">
+        <div class="flex-item">
+            <div class="banner">
+                <h1>Current Date and Time</h1>
+                <p id="current-datetime"></p>
+                <div class="toggle-clock">
+                    <label for="toggle">
+                        <input type="checkbox" onchange="toggleTimeFormat(this.checked)" checked name="toggle" id="toggle">
+                        12 Hour
+                    </label>
+                </div>
+            </div>
+            <div class="favorite">
+                <h1>Favorite List</h1>
+                <ul id="favorite-timezones"></ul>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+
+        <div class="flex-item">
+            <div class="timezone-table">
+                <h2>International Timezones</h2>
+                <div>
+                    <input type="search" placeholder="Search country..." autocomplete="off" name="search" onkeyup="searchTimeZone(this.value)" id="search">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Country</th>
+                            <th>Timezone</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="timezone-list">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+   
+    <script src="./javascript/app.js"></script>
+</body>
+</html>
